@@ -15,6 +15,11 @@ const App = () => {
     }
      */
     const [currentMovie, setCurrentMovie] = useState(null);
+
+    const clearCurrentMovie = () => {
+        setCurrentMovie(null);
+    }
+
     // this line is the same as the next two - this is array destructuring
     // const currentMovie = useState(null)[0];
     // const setCurrentMovie = useState(null)[1];
@@ -35,6 +40,7 @@ const App = () => {
                 )
             }
 
+            <button onClick={clearCurrentMovie}>Clear</button>
             {/* <MovieDetails/> is also fine to use here */}
             <MovieDetails
                 currentMovie={currentMovie}
